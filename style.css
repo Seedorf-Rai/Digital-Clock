@@ -1,18 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
     width: 100vw;
     background-color: black;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.clock-body{
+
+.clock-body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -22,23 +23,44 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.second{
+
+/* .second {
     height: 10px;
-    width: 200px;
+    width: 130px;
     border: 1px solid white;
     position: relative;
-    /* left: 70px; */
-    top: 10px;
+    left: 70px;
+    top: -37%;
     background: red;
-}
-.minute{
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+} */
+.hand {
     height: 10px;
-    width: 200px;
+    width: 130px;
+    border: 1px solid white;
+    position: relative;
+    left: -59px;
+    /* top: -37%; */
+    background: red;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+/* .minute {
+    height: 10px;
+    width: 130px;
     border: 1px solid white;
     position: relative;
     left: 70px;
     background: blue;
+    transform-origin: left center;
 }
+
 .hour{
     height: 10px;
     width: 150px;
@@ -46,4 +68,6 @@ body{
     position: relative;
     left: 70px;
     background: yellow;
-}
+    transform-origin: left center;
+
+} */

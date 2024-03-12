@@ -1,10 +1,37 @@
-const d = new Date();
-console.log(d.getSeconds());
+const secondHand = document.querySelector('.second')
+const minuteHand = document.querySelector('.minute')
+const hourHand = document.querySelector('.hour')
 
-const min = document.querySelector('.second')
-rotationAng = 0
-setInterval(()=>{
-    rotationAng += 6;
-  min.style.transform = `rotate(${rotationAng}deg)`;
-//   console.log("Hello");
-},1000)
+setInterval(() => {
+   const d = new Date()
+   const x = d.getSeconds();
+   const y = d.getMinutes();
+   const z = d.getHours();
+   const getS = (x / 60) * 360 + 90;
+   const getM = (y / 60) * 360 + 90;
+   const getH = (z / 12) * 360 + 90;
+
+   secondHand.style.transform = `rotate(${getS}deg)`
+   minuteHand.style.transform = `rotate(${getM}deg)`
+   hourHand.style.transform = `rotate(${getH}deg)`
+
+
+}, 1000)
+
+// const secondHand = document.querySelector('.second')
+// const minuteHand = document.querySelector('.minute')
+// const hourHand = document.querySelector('.hour')
+
+// setInterval(() => {
+//   const now = new Date()
+//   const seconds = now.getSeconds()
+//   const minutes = now.getMinutes()
+//   const hours = now.getHours()
+//   const secondsDegrees = (seconds / 60) * 360 + 90
+//   const minutesDegrees = (minutes / 60) * 360 + 90
+//   const hoursDegrees = (hours % 12) / 12 * 360 + 90
+
+//   secondHand.style.transform = `rotate(${secondsDegrees}deg)`
+//   minuteHand.style.transform = `rotate(${minutesDegrees}deg)`
+//   hourHand.style.transform = `rotate(${hoursDegrees}deg)`
+// }, 1000)
